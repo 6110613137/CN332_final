@@ -1,10 +1,11 @@
 
 public class DoubleBed implements Hotel {
 
-    private static String[] room = {"1", "2", "3", "4", "5"};
-    private static int[] status = {0, 0, 0, 0, 0};
+    HotelAdapter h = new HotelAdapter();
+    private String[] room = h.getRoomInfo();
+    private int[] status = h.getRoomAvailable();
+    private String price = h.getPrice();
     private String number;
-    private final String price = "1800";
 
     @Override
     public void addClient() {
